@@ -5,9 +5,10 @@ import {
   Routes,
 } from 'react-router-dom';
 import { CssBaseline, ThemeProvider} from '@mui/material';
+import theme from './styles/theme'
 
 const App = () => (
-  <ThemeProvider >
+  <ThemeProvider theme={theme} >
   <CssBaseline>
     <>
      pradzia
