@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Container, Typography, Button, Stack } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
-import Image from '../img/brooke.jpg';
+import Image from '../../components/img/brooke.jpg';
 
 
 const styles = {

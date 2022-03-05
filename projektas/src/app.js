@@ -1,19 +1,18 @@
 import React from 'react';
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-} from 'react-router-dom';
-import { CssBaseline, ThemeProvider} from '@mui/material';
-import theme from './styles/theme'
+import { Provider as ReduxProvider } from 'react-redux';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+
+import store from './store';
+import Router from './routing/router';
+import theme from './styles/theme';
 
 const App = () => (
-  <ThemeProvider theme={theme} >
-  <CssBaseline>
-    <>
-     pradzia
-    </>
-  </CssBaseline>
+  <ThemeProvider theme={theme}>
+    <CssBaseline>
+      <ReduxProvider store={store}>
+        <Router />
+      </ReduxProvider>
+    </CssBaseline>
   </ThemeProvider>
 );
 

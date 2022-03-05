@@ -7,9 +7,8 @@ import {
 } from '@mui/material';
 import { useSelector } from 'react-redux';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import Search from './page-layout-search';
 import { selectAuth } from '../../../store/auth';
-import NavbarLink from '../../navbar-link';
+import NavbarLink from '../navbar-link';
 import routes from '../../../routing/routes';
 import AuthMenu from '../../auth-menu';
 
@@ -31,10 +30,9 @@ const PageLayoutNavbar = () => {
       >
         <Box sx={{ display: 'flex' }}>
           <NavbarLink to={routes.HomePage}>Pradžia</NavbarLink>
-          <NavbarLink to={routes.HomePage}>Paslaugos</NavbarLink>
-          <NavbarLink to={routes.HomePage}>Kontaktai</NavbarLink>
+          <NavbarLink to={routes.ServicePage}>Paslaugos</NavbarLink>
+          <NavbarLink to={routes.ContactPage}>Kontaktai</NavbarLink>
         </Box>
-        <Search />
 
         <Box sx={{ display: 'flex', alignItems: 'stretch' }}>
           {

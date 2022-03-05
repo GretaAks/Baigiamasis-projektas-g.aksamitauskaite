@@ -7,8 +7,8 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
-import AuthMenu from '../../auth-menu';
-import NavbarLink from '../../navbar-link';
+import AuthMenu from '../../auth-menu/index';
+import NavbarLink from '../navbar-link';
 import routes from '../../../routing/routes';
 
 const StyledDashboardLayoutNavbar = styled(AppBar, {
