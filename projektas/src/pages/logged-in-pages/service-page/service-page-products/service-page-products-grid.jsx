@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Grid } from '@mui/material';
-import Card from './home-page-products-card';
-import { ProductContext } from '../contexts/product-context';
+import Card from './service-page-products-card';
+import { ProductContext } from '../context/product-context';
 
 const ServicePageProductsGrid = () => {
   const { products } = useContext(ProductContext);

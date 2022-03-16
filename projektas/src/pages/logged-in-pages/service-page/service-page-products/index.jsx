@@ -2,10 +2,10 @@ import React from 'react';
 import {
   Box,
 } from '@mui/material';
-import Header from './home-page-products-header';
-import Grid from './home-page-products-grid';
+import Header from './service-page-products-header';
+import Grid from './service-page-products-grid';
 
-const HomePageProducts = () => (
+const ServicePageProducts = () => (
   <Box sx={{
     flexGrow: 1,
     display: 'flex',
@@ -19,4 +19,4 @@ const HomePageProducts = () => (
   </Box>
 );
 
-export default HomePageProducts;
+export default ServicePageProducts;

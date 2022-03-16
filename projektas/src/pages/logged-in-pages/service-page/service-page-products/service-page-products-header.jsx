@@ -36,7 +36,6 @@ const ServicePageProductsHeader = () => {
 
   const handleSortSelect = (id) => {
     const newOption = sortOptions.find((x) => x.id === id);
-    // Rikiuojami relementai...
     setSortOption(newOption);
     closeSortMenu();
   };

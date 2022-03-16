@@ -43,11 +43,6 @@ const ServicePageProductsCard = ({
       })}
       onClick={navigate}
     >
-      <HeartIcon
-        className="favorite"
-        color="secondary"
-        sx={{ position: 'absolute', top: 4, right: 4 }}
-      />
       <Image src={images[0]} />
       <Box sx={{ p: 2 }}>
         <Box sx={{
@@ -62,7 +57,7 @@ const ServicePageProductsCard = ({
             {' '}
             €
           </Typography>
-          <Button variant="contained" size="small" color="secondary" onClick={addToCart}>
+          <Button variant="contained" size="small" color="success" onClick={addToCart}>
             <ShoppingCartIcon fontSize="small" />
           </Button>
         </Box>

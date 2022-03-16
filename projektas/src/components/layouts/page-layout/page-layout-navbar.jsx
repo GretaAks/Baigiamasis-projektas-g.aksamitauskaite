@@ -22,7 +22,7 @@ const PageLayoutNavbar = () => {
         height: theme.mixins.toolbar.minHeight,
       })}
     >
-      <Container sx={{
+      <Container color="error" sx={{
         height: '100%',
         display: 'flex',
         justifyContent: 'space-between',

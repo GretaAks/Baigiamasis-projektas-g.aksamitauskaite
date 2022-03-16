@@ -1,0 +1,161 @@
+{
+    "orders": [
+      {
+        "id": "1",
+        "userId": "1"
+      },
+      {
+        "id": "2",
+        "userId": "2"
+      }
+    ],
+    "services": [
+      {
+        "id": "1",
+        "title": "Vieno puslapio svetainė",
+        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": {
+          "currency": "EUR",
+          "value": 600
+        },
+        "image": "https://cdn.dribbble.com/users/34556/screenshots/6059747/endjinn-web-mockup_2x_4x.jpg?compress=1&resize=400x300"
+      },
+      {
+        "id": "2",
+        "title": "Reprezentacinė svetainė",
+        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": {
+          "currency": "EUR",
+          "value": 1000
+        },
+        "image": "https://uicookies.com/wp-content/uploads/2019/03/free-one-page-website-templates-1000x750.jpg"
+      },
+      {
+        "id": "3",
+        "title": "Elektroninė parduotuvė",
+        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": {
+          "currency": "EUR",
+          "value": 2000
+        },
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMxVqTENlxda23Fnnl-bsmksvRikRY7TIHJQ&usqp=CAU"
+      },
+      {
+        "id": "4",
+        "title": "Skelbimų portalas",
+        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": {
+          "currency": "EUR",
+          "value": 2500
+        },
+        "image": "https://cdn.dribbble.com/users/2151039/screenshots/14664792/media/e861f954a94b7c30c9fa90032ab652d1.jpg?compress=1&resize=400x300"
+      },
+      {
+        "id": "5",
+        "title": "Grafinio dizaino darbai",
+        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": {
+          "currency": "EUR",
+          "value": 300
+        },
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg8o3ML-J556qXLz9e2eEHy2moLoKfcNafpQ&usqp=CAU"
+      },
+      {
+        "id": "6",
+        "title": "Vieno puslapio svetainė",
+        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": {
+          "currency": "EUR",
+          "value": 600
+        },
+        "image": "https://cdn.dribbble.com/users/34556/screenshots/6059747/endjinn-web-mockup_2x_4x.jpg?compress=1&resize=400x300"
+      },
+      {
+        "id": "7",
+        "title": "Reprezentacinė svetainė",
+        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": {
+          "currency": "EUR",
+          "value": 1000
+        },
+        "image": "https://uicookies.com/wp-content/uploads/2019/03/free-one-page-website-templates-1000x750.jpg"
+      },
+      {
+        "id": "8",
+        "title": "Elektroninė parduotuvė",
+        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": {
+          "currency": "EUR",
+          "value": 2000
+        },
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMxVqTENlxda23Fnnl-bsmksvRikRY7TIHJQ&usqp=CAU"
+      },
+      {
+        "id": "9",
+        "title": "Skelbimų portalas",
+        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": {
+          "currency": "EUR",
+          "value": 2500
+        },
+        "image": "https://cdn.dribbble.com/users/2151039/screenshots/14664792/media/e861f954a94b7c30c9fa90032ab652d1.jpg?compress=1&resize=400x300"
+      },
+      {
+        "id": "10",
+        "title": "Grafinio dizaino darbai",
+        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "price": {
+          "currency": "EUR",
+          "value": 300
+        },
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg8o3ML-J556qXLz9e2eEHy2moLoKfcNafpQ&usqp=CAU"
+      }
+    ],
+    "users": [
+      {
+        "id": "1",
+        "name": "Vardas",
+        "phone": "",
+        "e-mail": ""
+      },
+      {
+        "id": "2",
+        "name": "Vardas2",
+        "phone": "",
+        "e-mail": ""
+      }
+    ],
+    "orderServices": [
+      {
+        "id": "1",
+        "cartId": "1",
+        "serviceId": "1",
+        "serviceTypeId": "1"
+      },
+      {
+        "id": "4",
+        "cartId": "2",
+        "serviceId": "2",
+        "serviceTypeId": "3"
+      }
+    ],
+    "serviceTypes": [
+      {
+        "id": "1",
+        "title": "gamta/eko"
+      },
+      {
+        "id": "2",
+        "title": "industrinis"
+      },
+      {
+        "id": "3",
+        "title": "modernus"
+      },
+      {
+        "id": "4",
+        "title": "minimalus"
+      }
+    ]
+  }
+  

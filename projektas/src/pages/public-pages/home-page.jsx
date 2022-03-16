@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Typography, Button, Stack } from '@mui/material';
+import { Box, Typography, Button, Stack } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import Image from '../../components/img/brooke.jpg';
 
@@ -34,10 +34,10 @@ const HomePage = () => {
               pr: { md: 0 },
             }}>
                 <Typography component="h1" variant="h3" color="white" gutterBottom position="center">
-              Parduotuvė
+              Mano parduotuvė
             </Typography>
             <Typography variant="h5" color="white" paragraph>
-              Papildomas tekstas papasakoti apie paslaugas
+              Pasirinkimas kiekvienam
             </Typography>
             <Stack
               sx={{ pt: 4 }}
