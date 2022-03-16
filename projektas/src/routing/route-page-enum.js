@@ -27,7 +27,7 @@ export default {
   RegisterPage,
   // Logged in pages
   ProfilePage,
-  // Admin pages[]
+  // Admin pages
   ProductsPanelPage,
   ProductFormPage,
 };
