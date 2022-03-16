@@ -1,161 +1,224 @@
 {
-    "orders": [
-      {
-        "id": "1",
-        "userId": "1"
-      },
-      {
-        "id": "2",
-        "userId": "2"
-      }
-    ],
-    "services": [
-      {
-        "id": "1",
-        "title": "Vieno puslapio svetainė",
-        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "price": {
-          "currency": "EUR",
-          "value": 600
-        },
-        "image": "https://cdn.dribbble.com/users/34556/screenshots/6059747/endjinn-web-mockup_2x_4x.jpg?compress=1&resize=400x300"
-      },
-      {
-        "id": "2",
-        "title": "Reprezentacinė svetainė",
-        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "price": {
-          "currency": "EUR",
-          "value": 1000
-        },
-        "image": "https://uicookies.com/wp-content/uploads/2019/03/free-one-page-website-templates-1000x750.jpg"
-      },
-      {
-        "id": "3",
-        "title": "Elektroninė parduotuvė",
-        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "price": {
-          "currency": "EUR",
-          "value": 2000
-        },
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMxVqTENlxda23Fnnl-bsmksvRikRY7TIHJQ&usqp=CAU"
-      },
-      {
-        "id": "4",
-        "title": "Skelbimų portalas",
-        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "price": {
-          "currency": "EUR",
-          "value": 2500
-        },
-        "image": "https://cdn.dribbble.com/users/2151039/screenshots/14664792/media/e861f954a94b7c30c9fa90032ab652d1.jpg?compress=1&resize=400x300"
-      },
-      {
-        "id": "5",
-        "title": "Grafinio dizaino darbai",
-        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "price": {
-          "currency": "EUR",
-          "value": 300
-        },
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg8o3ML-J556qXLz9e2eEHy2moLoKfcNafpQ&usqp=CAU"
-      },
-      {
-        "id": "6",
-        "title": "Vieno puslapio svetainė",
-        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "price": {
-          "currency": "EUR",
-          "value": 600
-        },
-        "image": "https://cdn.dribbble.com/users/34556/screenshots/6059747/endjinn-web-mockup_2x_4x.jpg?compress=1&resize=400x300"
-      },
-      {
-        "id": "7",
-        "title": "Reprezentacinė svetainė",
-        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "price": {
-          "currency": "EUR",
-          "value": 1000
-        },
-        "image": "https://uicookies.com/wp-content/uploads/2019/03/free-one-page-website-templates-1000x750.jpg"
-      },
-      {
-        "id": "8",
-        "title": "Elektroninė parduotuvė",
-        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "price": {
-          "currency": "EUR",
-          "value": 2000
-        },
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMxVqTENlxda23Fnnl-bsmksvRikRY7TIHJQ&usqp=CAU"
-      },
-      {
-        "id": "9",
-        "title": "Skelbimų portalas",
-        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "price": {
-          "currency": "EUR",
-          "value": 2500
-        },
-        "image": "https://cdn.dribbble.com/users/2151039/screenshots/14664792/media/e861f954a94b7c30c9fa90032ab652d1.jpg?compress=1&resize=400x300"
-      },
-      {
-        "id": "10",
-        "title": "Grafinio dizaino darbai",
-        "description" :"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "price": {
-          "currency": "EUR",
-          "value": 300
-        },
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg8o3ML-J556qXLz9e2eEHy2moLoKfcNafpQ&usqp=CAU"
-      }
-    ],
-    "users": [
-      {
-        "id": "1",
-        "name": "Vardas",
-        "phone": "",
-        "e-mail": ""
-      },
-      {
-        "id": "2",
-        "name": "Vardas2",
-        "phone": "",
-        "e-mail": ""
-      }
-    ],
-    "orderServices": [
-      {
-        "id": "1",
-        "cartId": "1",
-        "serviceId": "1",
-        "serviceTypeId": "1"
-      },
-      {
-        "id": "4",
-        "cartId": "2",
-        "serviceId": "2",
-        "serviceTypeId": "3"
-      }
-    ],
-    "serviceTypes": [
-      {
-        "id": "1",
-        "title": "gamta/eko"
-      },
-      {
-        "id": "2",
-        "title": "industrinis"
-      },
-      {
-        "id": "3",
-        "title": "modernus"
-      },
-      {
-        "id": "4",
-        "title": "minimalus"
-      }
-    ]
-  }
-  
+  "users": [
+    {
+      "id": "2",
+      "email": "admin@gmail.com",
+      "password": "Vilnius123",
+      "name": "Admin",
+      "surname": "Paštomatas",
+      "role": "ADMIN",
+      "imgSrc": "/images/img-1647304582805.jpg"
+    },
+    {
+      "id": "2ac817ad-f7b6-4d0e-a911-3f4f639c78f1",
+      "email": "user1@gmail.com",
+      "name": "Perka",
+      "surname": "Pirkėjas",
+      "password": "Vilnius123",
+      "role": "USER",
+      "imgSrc": "/images/avatar.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "price": 39.99,
+      "category": "1",
+      "images": [
+        "http://localhost:5000/images/eflyer.jpg"
+      ]
+    },
+    {
+      "id": "2",
+      "price": 49.99,
+      "category": "2",
+      "images": [
+        "http://localhost:5000/images/ogani.jpg"
+      ]
+    },
+    {
+      "id": "3",
+      "price": 79.99,
+      "category": "1",
+      "images": [
+        "http://localhost:5000/images/static.jpg"
+      ]
+    },
+    {
+      "id": "4",
+      "price": 199.99,
+      "category": "4",
+      "images": [
+        "http://localhost:5000/images/rappo.jpg"
+      ]
+    },
+    {
+      "id": "5",
+      "price": 99.99,
+      "category": "3",
+      "images": [
+        "http://localhost:5000/images/rappo.jpg"
+      ]
+    },
+    {
+      "id": "5",
+      "price": 11.99,
+      "category": "1",
+      "images": [
+        "http://localhost:5000/images/ShotGear.jpg"
+      ]
+    },
+    {
+      "id": "82ee2386-93d5-45ee-bb34-dc1da1a47e01",
+      "images": [
+        "http://localhost:5000/images/images-1647299694025.png"
+      ],
+      "category": "1",
+      "price": "19.99"
+    },
+    {
+      "id": "940063a4-d036-44a1-8758-f983a20feb4d",
+      "images": [
+        "http://localhost:5000/images/images-1647299710360.jpg"
+      ],
+      "category": "1",
+      "price": "25.99"
+    },
+    {
+      "id": "afd3c12a-3b5e-48fd-8975-42a574878b87",
+      "images": [
+        "http://localhost:5000/images/images-1647299748670.png"
+      ],
+      "category": "1",
+      "price": "37.99"
+    },
+    {
+      "id": "735329b4-68c1-4fac-9204-2caef501505f",
+      "images": [
+        "http://localhost:5000/images/images-1647299765639.jpg"
+      ],
+      "category": "1",
+      "price": "25.99"
+    },
+    {
+      "id": "153a825d-acd2-4a19-afcc-5c7c307ea52b",
+      "images": [
+        "http://localhost:5000/images/images-1647299850169.jpg"
+      ],
+      "category": "1",
+      "price": "23.99"
+    },
+    {
+      "id": "37d65234-38a6-48d3-abed-3ffdcd73e1eb",
+      "images": [
+        "http://localhost:5000/images/images-1647300115080.jpg"
+      ],
+      "category": "1",
+      "price": "35.99"
+    },
+    {
+      "id": "537a6ca9-d8cf-4534-b133-702fd7cd6471",
+      "images": [
+        "http://localhost:5000/images/images-1647300195904.jpg"
+      ],
+      "category": "1",
+      "price": "42.99"
+    },
+    {
+      "id": "01417b17-1c3f-46b7-a27c-41d7897b9b7c",
+      "images": [
+        "http://localhost:5000/images/images-1647300250905.jpg"
+      ],
+      "category": "1",
+      "price": "31.99"
+    },
+    {
+      "id": "5b41aa06-2b80-4a9f-a855-77d92b3c77da",
+      "images": [
+        "http://localhost:5000/images/images-1647304370177.jpg"
+      ],
+      "category": "1",
+      "price": "31.99"
+    },
+    {
+      "id": "cb315001-b787-40cd-bd94-4278eb781247",
+      "images": [
+        "http://localhost:5000/images/images-1647304409664.jpg"
+      ],
+      "category": "1",
+      "price": "26.99"
+    },
+    {
+      "id": "d501ae2b-0487-408a-8bed-694dab490b02",
+      "images": [
+        "http://localhost:5000/images/images-1647372883743.jpg"
+      ],
+      "category": "3",
+      "price": "87.98"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "title": "Vieno puslapio svetainės",
+      "icon": "TaskIcon",
+      "properties": [
+        {
+          "name": "price",
+          "type": "range"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Reprezentacinės svetainės",
+      "icon": "PagesIcon",
+      "properties": [
+        {
+          "name": "price",
+          "type": "range"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "El. parduotuvės",
+      "icon": "Shop2Icon",
+      "properties": [
+        {
+          "name": "price",
+          "type": "range"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Skelbimų portalai",
+      "icon": "FeaturedVideoIcon",
+      "properties": [
+        {
+          "name": "price",
+          "type": "range"
+        }
+      ]
+    }
+  ],
+  "collections": [
+    {
+      "id": "1",
+      "title": "Vieno puslapio svetainės"
+    },
+    {
+      "id": "2",
+      "title": "Reprezentacinės svetainės"
+    },
+    {
+      "id": "3",
+      "title": "El. parduotuvės"
+    },
+    {
+      "id": "4",
+      "title": "Skelbimų portalai"
+    }
+  ]
+}

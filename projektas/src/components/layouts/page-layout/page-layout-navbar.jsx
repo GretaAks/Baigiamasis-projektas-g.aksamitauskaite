@@ -38,8 +38,8 @@ const PageLayoutNavbar = () => {
             ? <AuthMenu />
             : (
               <Box sx={{ display: 'flex' }}>
-                <NavbarLink to={routes.LoginPage}>Login</NavbarLink>
-                <NavbarLink to={routes.RegisterPage}>Register</NavbarLink>
+                <NavbarLink to={routes.LoginPage}>Prisijungti</NavbarLink>
+                <NavbarLink to={routes.RegisterPage}>Registruotis</NavbarLink>
               </Box>
             )
           }
