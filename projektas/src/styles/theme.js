@@ -20,6 +20,18 @@ const theme = createTheme({
       dark: '#e36300',
       contrastText: '#fafafa',
     },
+    error: {
+      main: '#d32f2f',
+      light: '#ef5350',
+      dark: '#c62828',
+      contrastText: '#fafafa',
+    },
+    success: {
+      main: '#2e7d32',
+      light: '#4caf50',
+      dark: '#1b5e20',
+      contrastText: '#fafafa',
+    },
   },
   mixins: {
     drawer: {
@@ -27,7 +39,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: '\'Lato\', sans-serif',
+    fontFamily: '\'Montserrat\', sans-serif',
   },
 });
 

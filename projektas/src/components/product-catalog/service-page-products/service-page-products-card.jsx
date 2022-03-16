@@ -5,10 +5,14 @@ import {
   Box,
   styled,
   Button,
+  Divider,
 } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import { useSelector } from 'react-redux';
+import EditIcon from '@mui/icons-material/Edit';
+import { useNavigate } from 'react-router-dom';
+import { selectAuth } from '../../../store/auth';
+import routes from '../../../routing/routes';
 
 const Image = styled('img')({
   height: 200,
@@ -19,16 +23,13 @@ const Image = styled('img')({
 const ServicePageProductsCard = ({
   id, images, price, ...props
 }) => {
-  const navigate = () => {
-    console.log('Naviguojama i atskirą produkto puslapį:', id);
-  };
+  const { user } = useSelector(selectAuth);
+  const navigate = useNavigate();
 
-  const addToCart = (event) => {
+  const navigateToProductEdit = (event) => {
     event.stopPropagation();
-    console.log('Pridedama į Krepšelį productas su id', id);
+    navigate(routes.ProductFormPage, { state: { id } });
   };
-
-  const HeartIcon = Math.random() > 0.5 ? FavoriteIcon : FavoriteBorderIcon;
 
   return (
     <Paper
@@ -38,10 +39,9 @@ const ServicePageProductsCard = ({
         flexDirection: 'column',
         cursor: 'pointer',
         ':hover': {
-          boxShadow: `0 0 0 2px ${theme.palette.secondary.main}`,
+          boxShadow: `0 0 0 2px ${theme.palette.success.main}`,
         },
       })}
-      onClick={navigate}
     >
       <Image src={images[0]} />
       <Box sx={{ p: 2 }}>
@@ -50,14 +50,14 @@ const ServicePageProductsCard = ({
         }}
         >
           <Typography
-            color="secondary"
+            color="success"
             variant="h6"
           >
             {price}
             {' '}
             €
           </Typography>
-          <Button variant="contained" size="small" color="success" onClick={addToCart}>
+          <Button variant="contained" size="small" color="success">
             <ShoppingCartIcon fontSize="small" />
           </Button>
         </Box>
@@ -75,6 +75,21 @@ const ServicePageProductsCard = ({
               ))}
           </Box>
         </Box>
+        {user && user.role === 'ADMIN' && (
+          <Box>
+            <Divider sx={{ my: 2 }}>-</Divider>
+            <Box
+              sx={{ display: 'flex', justifyContent: 'center' }}
+              onClick={navigateToProductEdit}
+            >
+              <Button variant="contained" size="small" color="success">
+                Atnaujinti
+                {' '}
+                <EditIcon sx={{ ml: 1 }} />
+              </Button>
+            </Box>
+          </Box>
+        )}
       </Box>
     </Paper>
   );

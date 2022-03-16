@@ -12,23 +12,13 @@ export default [
         auth: LOGGED_IN,
       },
       {
-        path: 'collections',
-        pageName: 'CollectionsPage',
+        path: 'products',
+        pageName: 'ProductsPanelPage',
         auth: ADMIN,
       },
       {
-        path: 'collections/:collectionTitle',
-        pageName: 'CollectionPanelPage',
-        auth: ADMIN,
-      },
-      {
-        path: 'categories',
-        pageName: 'CategoriesPanelPage',
-        auth: ADMIN,
-      },
-      {
-        path: 'categories/:categoryTitle',
-        pageName: 'CategoryPanelPage',
+        path: 'product-form',
+        pageName: 'ProductFormPage',
         auth: ADMIN,
       },
     ],
@@ -42,8 +32,8 @@ export default [
         pageName: 'HomePage',
       },
       {
-        path: null,
-        pageName: 'ContactPage',
+        path: 'servicePage',
+        pageName: 'ServicePage',
       },
       {
         path: 'login',

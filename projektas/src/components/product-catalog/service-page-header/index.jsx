@@ -7,7 +7,7 @@ import {
 } from '@mui/material';
 import { ProductContext } from '../contexts/product-context';
 
-const HomePageHeader = () => {
+const ServicePageHeader = () => {
   const { categories, selectedCategory, changeCategory } = useContext(ProductContext);
 
   return (
@@ -22,7 +22,7 @@ const HomePageHeader = () => {
               gap: 1,
               textTransform: 'Capitalize',
             }}
-            color={id === selectedCategory ? 'secondary' : 'inherit'}
+            color={id === selectedCategory ? 'success' : 'inherit'}
             onClick={() => changeCategory(id)}
           >
             <Typography>{title}</Typography>
@@ -35,4 +35,4 @@ const HomePageHeader = () => {
   );
 };
 
-export default HomePageHeader;
+export default ServicePageHeader;

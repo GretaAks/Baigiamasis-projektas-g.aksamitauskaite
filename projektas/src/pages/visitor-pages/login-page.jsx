@@ -91,7 +91,6 @@ const LoginPage = () => {
             id="email"
             label="El. paštas"
             autoFocus
-            // Props provided by Formik
             name="email"
             value={values.email}
             onChange={handleChange}
@@ -108,7 +107,6 @@ const LoginPage = () => {
             label="Slaptažodis"
             type="password"
             id="password"
-            // Props provided by Formik
             name="password"
             value={values.password}
             onChange={handleChange}

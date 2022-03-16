@@ -1,149 +1,105 @@
-import React, { useState } from 'react';
-import { useFormik } from 'formik';
-import * as yup from 'yup';
+import React, { useRef, useEffect } from 'react';
 import {
   Box,
-  TextField,
-  Button,
-  CircularProgress,
-  InputAdornment,
   styled,
+  Fab,
 } from '@mui/material';
-import ErrorIcon from '@mui/icons-material/Error';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
-import AuthService from '../../../services/auth-service';
-import ConfirmationModal from './profile-page-confirmation-modal';
+import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
+import UserService from '../../../services/user-service';
 
-const Form = styled('form')(({ theme }) => ({
+const mdFixedPortion = 200;
+
+const ImgContainer = styled(Box)(({ theme }) => ({
+  position: 'relative',
+  display: 'block',
+  height: '65vw',
+  width: '65vw',
+  marginLeft: 'auto',
+  marginRight: 'auto',
   [theme.breakpoints.up('sm')]: {
-    paddingRight: theme.spacing(10),
+    height: 220,
+    width: 220,
+    marginLeft: theme.spacing(2),
+    marginRight: 'initial',
+    marginTop: theme.spacing(3),
   },
   [theme.breakpoints.up('md')]: {
-    paddingRight: 0,
+    height: `calc(${mdFixedPortion}px + 10vw)`,
+    width: `calc(${mdFixedPortion}px + 10vw)`,
+  },
+  [theme.breakpoints.up('lg')]: {
+    height: mdFixedPortion + 0.1 * theme.breakpoints.values.lg,
+    width: mdFixedPortion + 0.1 * theme.breakpoints.values.lg,
   },
 }));
 
-const validationSchema = yup.object({
-  name: yup
-    .string()
-    .min(2, 'At least 2 symbols')
-    .max(32, 'Maximum 32 symbols')
-    .required('Is required'),
-  surname: yup
-    .string()
-    .min(2, 'At least 2 symbols')
-    .max(32, 'Maximum 32 symbols')
-    .required('Is required'),
-  email: yup
-    .string()
-    .email('Is not valid email')
-    .required('Is required'),
+const Img = styled('img')({
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+  objectPosition: 'cover',
+  borderRadius: '50%',
 });
 
-const ProfilePageForm = ({ name, surname, email }) => {
-  const [emailBeingChecked, setEmailBeingChecked] = useState(false);
-  const [emailAvailable, setEmailAvailable] = useState(true);
-  const [open, setOpen] = useState(false);
+const calcOffset = (image, imgIcon) => {
+  const radius = image.offsetWidth / 2;
+  const imageDimension = imgIcon.offsetWidth;
 
-  const onSubmit = () => {
-    setOpen(true);
+  return radius * (1 - 1 / (2 ** (1 / 2))) - imageDimension / 2.3;
+};
+
+const ProfilePageImage = ({ imgSrc }) => {
+  const imageRef = useRef(null);
+  const imgIconRef = useRef(null);
+  const imgUploadRef = useRef(null);
+
+  const handleUploadImgClick = () => {
+    const imgUpload = imgUploadRef.current;
+    imgUpload.click();
   };
 
-  const {
-    values,
-    errors,
-    dirty,
-    isValid,
-    handleChange,
-    handleSubmit,
-    isSubmitting,
-  } = useFormik({
-    initialValues: {
-      name,
-      surname,
-      email,
-    },
-    validationSchema,
-    onSubmit,
-    enableReinitialize: true,
-  });
-
-  const emailIsInitial = values.email === email;
-
-  const handleEmailChange = (event) => {
-    handleChange(event);
-    if (event.target.value !== email && !errors.email) {
-      (async () => {
-        setEmailBeingChecked(true);
-        const fetchedEmailAvailable = await AuthService.checkEmail(event.target.value);
-        setEmailBeingChecked(false);
-        setEmailAvailable(fetchedEmailAvailable);
-      })();
-    }
+  const handleUploadImgLoaded = async () => {
+    const imgUpload = imgUploadRef.current;
+    const [img] = imgUpload.files;
+    await UserService.uploadImage(img);
   };
 
-  let emailAdornment;
-  if (!emailIsInitial && !errors.email) {
-    if (emailBeingChecked) {
-      emailAdornment = <InputAdornment position="end"><CircularProgress size={24} /></InputAdornment>;
-    } else {
-      emailAdornment = emailAvailable
-        ? <InputAdornment position="end"><CheckCircleIcon color="success" /></InputAdornment>
-        : <InputAdornment position="end"><ErrorIcon color="error" /></InputAdornment>;
-    }
-  }
+  useEffect(() => {
+    const adjustImgIconOffset = () => {
+      const offset = calcOffset(imageRef.current, imgIconRef.current);
+      const imgIcon = imgIconRef.current;
+
+      imgIcon.style.bottom = `${offset}px`;
+      imgIcon.style.right = `${offset}px`;
+    };
+    adjustImgIconOffset();
+
+    window.addEventListener('resize', adjustImgIconOffset);
+
+    return () => {
+      window.removeEventListener('resize', adjustImgIconOffset);
+    };
+  }, []);
 
   return (
-    <>
-      <ConfirmationModal handleClose={() => setOpen(false)} open={open} formData={values} />
-      <Form onSubmit={handleSubmit}>
-        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
-          <TextField
-            label="Vardas"
-            size="small"
-            name="name"
-            value={values.name}
-            onChange={handleChange}
-            error={Boolean(errors.name)}
-            helperText={errors.name}
-            disabled={isSubmitting}
-          />
-          <TextField
-            label="Pavardė"
-            size="small"
-            name="surname"
-            value={values.surname}
-            onChange={handleChange}
-            error={Boolean(errors.surname)}
-            helperText={errors.surname}
-            disabled={isSubmitting}
-          />
-          <TextField
-            label="Paštas"
-            size="small"
-            name="email"
-            value={values.email}
-            onChange={handleEmailChange}
-            error={Boolean(errors.email) || !emailAvailable}
-            helperText={errors.email ?? (emailAvailable ? undefined : 'paštas jau užimtas')}
-            InputProps={{ endAdornment: emailAdornment }}
-            disabled={isSubmitting}
-          />
-        </Box>
-        <Box sx={{ display: 'flex', justifyContent: 'center', pt: 2 }}>
-          <Button
-            variant="contained"
-            color="primary"
-            type="submit"
-            disabled={!dirty || !isValid}
-            sx={{ width: 120 }}
-          >
-            {isSubmitting ? <CircularProgress color="inherit" size={24} /> : 'Redaguoti'}
-          </Button>
-        </Box>
-      </Form>
-    </>
+    <ImgContainer>
+      <Img src={imgSrc ?? '/no-image-person.jpg'} alt="user image" ref={imageRef} />
+      <Fab
+        color="primary"
+        size="small"
+        ref={imgIconRef}
+        onClick={handleUploadImgClick}
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          position: 'absolute',
+        }}
+      >
+        <AddAPhotoIcon fontSize="small" />
+      </Fab>
+      <input type="file" accept=".png, .jpg, .jpeg" hidden ref={imgUploadRef} onChange={handleUploadImgLoaded} />
+    </ImgContainer>
   );
 };
 
-export default ProfilePageForm;
+export default ProfilePageImage;
